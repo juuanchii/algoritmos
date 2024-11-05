@@ -160,20 +160,6 @@ class BinaryTree:
         if self.root is not None:
             __postorden(self.root)
 
-    def postorden_data_pokemons(self):
-        def __postorden_data_pokemons(root):
-            if root is not None:
-                __postorden_data_pokemons(root.right)
-                print("--------------------------------")
-                print(f"        Numero: {root.other_value['numero']}")
-                print(f"        Nombre: {root.other_value["nombre"]}")
-                print(f"        Tipo: {root.other_value['tipo']}")
-
-                __postorden_data_pokemons(root.left)
-
-        if self.root is not None:
-            __postorden_data_pokemons(self.root)
-
     def proximity_search(self, search_value):
         def __proximity_search(root, search_value):
             if root is not None:
@@ -266,51 +252,3 @@ class BinaryTree:
         if self.root is not None:
             __inorden_por_tipo(self.root)
 
-# tree = BinaryTree()
-
-# tree.insert_node('B')
-# tree.insert_node('W')
-# tree.insert_node('V')
-# tree.insert_node('I')
-# tree.insert_node('M')
-# tree.insert_node('R')
-# tree.insert_node('Z')
-# tree.root = tree.balancing(tree.root)
-# for i in range(1, 16):
-#     tree.insert_node(i)
-#     tree.by_level()
-#     a = input()
-
-
-# print('diferencia de altura', tree.height(tree.root.right) - tree.height(tree.root.left))
-# tree.insert_node(19)
-# tree.insert_node(7)
-# tree.insert_node(31)
-# tree.insert_node(11)
-# tree.insert_node(10)
-# tree.insert_node(45)
-# tree.insert_node(22)
-# tree.insert_node(27)
-
-# pos = tree.search(27)
-# if pos:
-#     print('lo encontre', pos.value)
-# else:
-#     print('no esta')
-
-# tree.delete_node(7)
-# tree.delete_node(11)
-# tree.delete_node(31)
-# tree.delete_node(27)
-# tree.delete_node(45)
-# tree.delete_node(22)
-# tree.delete_node(19)
-# tree.delete_node(10)
-# tree.insert_node(27)
-
-# print(tree.delete_node(100))
-# tree.preorden()
-
-# print(tree.root.right)
-
-# tree.by_level()
